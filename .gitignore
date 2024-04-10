@@ -1,0 +1,17 @@
+.vscode/
+.idea/
+
+# golang
+wordcount_mapper.so
+wordcount_reducer.so
+
+# java
+target/
+target_udf/
+
+# python
+__pycache__/
+mapper.pkl
+reducer.pkl
+
+output.txt
