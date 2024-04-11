@@ -1,7 +1,7 @@
 # MapReduce
 本实验需要实现一个简易版 mapreduce 框架，不限语言。
 
-我们提供了单机版 mapreduce 框架在三种语言下的实现供大家参考，并基于该框架实现了 wordcount 程序。
+我们提供了单机集中式 mapreduce 框架在三种语言下的实现供大家参考，并基于该框架实现了 wordcount 程序。
 
 项目结构：
 ```
@@ -69,7 +69,7 @@ sh run.sh
 
 ## 基础要求
 
-1. 实现伪分布式 mapreduce 框架（可基于提供的任意单机版框架进行扩展，也可以自由实现）：
+1. 实现伪分布式 mapreduce 框架（可基于提供的任意单机集中式框架进行扩展，也可以自由实现）：
     
     a. 包含 map、shuffle 和 reduce 三个阶段，提供可编程的 map 和 reduce 接口；
     
@@ -82,3 +82,8 @@ sh run.sh
 1. 实现分布式 mapreduce 框架：JobTracker 和 TaskTracker 运行在不同的机器上。
 
 2. 端到端测试：基于分布式框架实现 wordcount 程序。
+
+## 验收方式
+
+第 13 - 16 周实验课上进行演示，并提交包含完整实现代码的 github 仓库链接（基于本仓库进行扩展的同学须 fork 本仓库）。
+
