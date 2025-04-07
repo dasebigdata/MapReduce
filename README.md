@@ -67,23 +67,27 @@ sh run.sh
 3. map -> shuffle -> reduce；
 4. 写入输出文件。
 
-## 基础要求
+## 实现要求
 
-1. 实现伪分布式 mapreduce 框架（可基于提供的任意单机集中式框架进行扩展，也可以自由实现）：
-    
-    a. 包含 map、shuffle 和 reduce 三个阶段，提供可编程的 map 和 reduce 接口；
-    
-    b. master（JobTracker）和 worker（TaskTracker）运行在不同的进程中。
+1. 实现分布式 mapreduce 框架（可基于提供的任意单机集中式框架进行扩展，也可以自由实现）：
 
-2. 端到端测试：基于伪分布式框架实现 wordcount 程序。
+   a. master（JobTracker）和 worker（TaskTracker）以服务形式运行；
 
-## 进阶要求
+   b. 可以执行 mapreduce 任务，包含 map、shuffle 和 reduce 三个阶段；
 
-1. 实现分布式 mapreduce 框架：JobTracker 和 TaskTracker 运行在不同的机器上。
+   c. 提供可编程的 map 和 reduce 接口；
 
-2. 端到端测试：基于分布式框架实现 wordcount 程序。
+2. 端到端测试：基于该框架实现 wordcount 程序。
+
+## 参考功能与优化
+
+1. reduce 任务执行时机；
+2. map 和 reduce 任务的数量和大小；
+3. shuffle 优化；
+4. combine 机制；
+5. 容错机制。
 
 ## 验收方式
 
-第 13 - 16 周实验课上进行演示，并提交包含完整实现代码的 github 仓库链接（基于本仓库进行扩展的同学须 fork 本仓库）。
+第 17 周课上进行演示，并提交包含完整实现代码的 github 仓库链接（基于本仓库进行扩展的同学须 fork 本仓库）。
 
